@@ -199,7 +199,7 @@ void rotate(unsigned int value1)
 	unsigned m,n;
 	for(m=0;m<value1;m++)
     {
-         P0 = 0x03;     //0011     P2_0=1,P2_1=1,P2_2=0,P2_3=0
+         P0 = 0x03;     //0011     
         msdelay(1);
         P0 = 0x06;         //0110
         msdelay(1);
@@ -211,13 +211,13 @@ void rotate(unsigned int value1)
 		msdelay(1428);
 		for(n=0;n<120;n++)
 		{
-         P0 = 0x09;     //0011     P2_0=1,P2_1=1,P2_2=0,P2_3=0
+         P0 = 0x09;     //1001
         msdelay(1);
-        P0 = 0x0C;         //0110
+        P0 = 0x0C;         //1100
         msdelay(1);
-        P0 = 0x06;         //1100
+        P0 = 0x06;         //0110
         msdelay(1);
-        P0 = 0x03;         //1001
+        P0 = 0x03;         //0011
         msdelay(1);
     }
 }
